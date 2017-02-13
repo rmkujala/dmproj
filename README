@@ -1,0 +1,32 @@
+Project repository for the Algorithmic methods for data mining course project.
+
+Group Members:
+Rainer Kujala, Rainer.Kujala@aalto.fi
+Olli-Pekka Koistinen, Olli-Pekka.Koistinen@aalto.fi
+
+
+Code usage:
+
+To obtain the figures shown in the report, the following steps need to be performed:
+
+0. Set up the param data_dir (containing the orig. data set and future results) in settings.py
+1. Run python prepro.py
+	- This the plots in the report and computes the preprocessed data sets
+2. Run brute_force.py with all input parameter combinations [0-2, 0-7]:
+	pypy brute_force.py 0 0
+	pypy brute_force.py 0 1
+	...
+	pypy brute_force.py 2 7
+	(this takes a while)
+3. Run plot_brute_force.py (using python) for plotting the results for brute force.
+4. Run sh create_identity_indices.sh
+5. Run sh create_speedup_indices.sh
+6. Run speedups.py (using pypy) with all input parameter combinations as in step 2.
+7. Run plot_speedups.py (using python) for plotting the speedup curves
+8. Run approx.py (using pypy) with input parameter combinations [0-2, 0-7, 0-1]
+	(the last one is for selecting the approximation threshold (1.5 or 1.2))
+9. Run plot_approx.py (using python) to plot the speedups and mean estimation accuracies.
+
+10. To assert that the results are valid, run assert_results.py (with python)
+
+

@@ -1,0 +1,7 @@
+source/dmproj.sublime*
+source/*pyc
+report/report.aux
+report/report.log
+report/report.out
+report/report.pdf
+
